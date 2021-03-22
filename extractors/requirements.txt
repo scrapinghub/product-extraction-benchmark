@@ -1,0 +1,17 @@
+BeautifulSoup4==4.9.3
+certifi==2020.12.5
+chardet==4.0.0
+extruct==0.12.0
+html-text==0.5.2
+html5lib==1.1
+idna==2.10
+isodate==0.6.0
+jstyleson==0.0.2
+lxml==4.6.3
+mf2py==1.1.2
+price-parser==0.3.4
+pyrdfa3==3.5.3
+rdflib==5.0.0
+rdflib-jsonld==0.5.0
+soupsieve==2.2.1
+w3lib==1.22.0
