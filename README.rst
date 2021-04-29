@@ -13,12 +13,16 @@ We evaluated quality of the following attributes:
 * availability (whether the product is in-stock or out-of-stock)
 * SKU
 
-We find that Zyte has significantly better extraction quality compared to Diffbot
-for price and sku, while quality for availability is similar.
+Based on our comparison we found extraction quality of Zyte Automatic Extraction
+is significantly better compared to Diffbot for price and sku attributes,
+whilst results for availability are comparable.
 
-We learnt that it’s important to ensure all systems receive exactly the same input,
-as many web pages show different prices depending on the location and other factors.
-To ensure fairness, we were serving page snapshots instead of original pages.
+When developing the comparison methodology we came across a challenge
+of many target web pages displaying different prices based on
+the geographical location and other factors.
+To ensure a fair comparison all systems must receive exactly the same data input,
+so we served page snapshots instead of original target pages
+to compare what each extraction tool returned.
 
 We have released the dataset (including web archive files), ground truth annotations,
 evaluation code and baseline open source extraction code.
@@ -26,28 +30,30 @@ evaluation code and baseline open source extraction code.
 Results
 =======
 
-Main results are in the chart below: for each attribute, we show the main metric F1,
-which balances precision and recall. Higher values correspond to better quality,
-perfect quality corresponds to F1 equal to 1. We also show the standard deviation in black,
-which tells how reliable are the F1 values, and how they might change on a different dataset.
+The main results are displayed in the chart below.
+We used the F1 metric  for each attribute, a measure combining the precision and recall of the model.
+The higher the F1 score, the better quality of extraction, a perfect model has an F1 score of 1.
+We also show standard deviation in black, which tells how reliable the F1 values are,
+and how they might change in a different dataset.
 
 .. image:: notebooks/plots.png
 
-Detailed results are in the table below. Besides the F1 we present precision and recall values,
-with standard deviation is given after the “±” sign, and support for each attribute,
+Detailed results of the comparison are presented in the table below.
+In addition to  F1 we present precision and recall values, with standard deviation given after the “±” sign.
+Also shown is Support for each attribute,
 which is the number of pages where an attribute should be present according to ground truth annotations.
-Additionally to 3 evaluated attributes,
-we present the metrics for InStock and OutOfStock values of availability attribute.
+We  also present the metrics for InStock and OutOfStock values of the product availability attribute.
 
 We see that for both price and sku attributes,
-Zyte offers significantly higher values of both precision and recall compared to Diffbot.
-We also see that the difference in recall is bigger than the difference in precision -
-this means that Diffbot suffers more from not finding the expected value,
-although the quality of the values it finds is also lower.
+precision and recall of Zyte Automatic Extraction is significantly higher compared to Diffbot.
+We also see that the difference in recall is greater than the difference in precision -
+this means that Diffbot falls short in finding the expected value,
+although the quality of the value it finds is also lower.
 
-The difference in availability is not significant because the dataset is very biased towards
-products which are in stock: there are only 9 out-of-stock products,
-so availability score is dominated by products which are in-stock, while out-of-stock score is uncertain.
+The difference in availability is not significant
+as the dataset is somewhat biased towards products that are in stock:
+there are only 9 out-of-stock products, so availability score is dominated by products which are in-stock,
+while out-of-stock score is uncertain.
 
 +--------------+-------------+---------------+---------------+---------------+-----------+
 | Attribute    | System      | F1            | Precision     | Recall        |   Support |
