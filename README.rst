@@ -242,7 +242,7 @@ The following systems were evaluated:
 * `Diffbot Product API <https://docs.diffbot.com/docs/en/api-product>`_ (or "Diffbot" in this document).
   Pages were fetched in February 2021.
 * `Baseline open-source extractor <https://github.com/scrapinghub/product-extraction-benchmark/blob/master/extractors/run_extruct.py>`_
-  using `extrcut <https://github.com/scrapinghub/extruct>`_
+  using `extruct <https://github.com/scrapinghub/extruct>`_
   and `price-parser <https://github.com/scrapinghub/price-parser>`_ (or "extruct" in this document).
   This extractor uses semantic markup, is meant as a base-line, and it's recall is far from perfect.
   If you would like to add other open-source extractors to the evaluation, please raise issues or send pull requests.
