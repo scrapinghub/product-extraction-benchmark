@@ -1,13 +1,13 @@
 BeautifulSoup4==4.9.3
-certifi==2020.12.5
+certifi==2024.7.4
 chardet==4.0.0
 extruct==0.12.0
 html-text==0.5.2
 html5lib==1.1
-idna==2.10
+idna==3.7
 isodate==0.6.0
 jstyleson==0.0.2
-lxml==4.6.3
+lxml==4.9.1
 mf2py==1.1.2
 price-parser==0.3.4
 pyrdfa3==3.5.3
